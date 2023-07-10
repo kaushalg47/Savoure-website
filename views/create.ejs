@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="\styles\create.css" rel="stylesheet"/>
+  <link href="\styles\home.css" rel="stylesheet"/>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" > </script>
+</head>
+</body>
+
+<div class="navbar">
+  <div class="logo" style="display: inline-block";><a href="#">savouré</a></div>
+  <div class="search"><script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <lord-icon
+        src="https://cdn.lordicon.com/xfftupfv.json"
+        trigger="hover"
+        style="width:20px;height:20px;margin-top: 4px;margin-left: 7px;">
+    </lord-icon><input type="text" placeholder="Search.."></div>
+  <div class="navigation">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#"><script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/gigfpovs.json"
+              trigger="hover"
+              style="width:32px;height:32px">
+          </lord-icon></a></li>
+        <li><a href="login.html"><script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/wfadduyp.json"
+              trigger="hover"
+              style="width:32px;height:32px">
+          </lord-icon></a></li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+</div>
+</div>
+  
+
+
+
+
+<div class="form" id="wrapper">
+  <form class="forms" action="/create" method="post" >
+    <h1>create a new post:</h1>
+     
+     <input id="title" type="text" placeholder="enter the recipe title" name="title"/>
+     
+     <textarea id="content" type="text" placeholder="enter you recipe here" name="content"></textarea>
+     <button type="submit" onclick=add()>Post!</button>
+  </form></div><br>
+<div class="card23">
+  <ol id="list">
+    <li>
+      <div>
+        <h3>suger donuts</h3><p>Donuts are circle shaped baked sugar dough which are baked at high temperature to achieve the fulffiness giving it the soft texture</p><br>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Bagel</h3><p>Doughnut-shaped yeast-leavened roll that is characterized by a crisp, shiny crust and a dense interior</p><br>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Bolganesh</h3><p> Doughnut-shaped yeast-leavened roll that is characterized by a crisp, shiny crust and a dense interior</p><br>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>croissant</h3><p> A flaky crescent-shaped bread roll made of a yeast dough similar to puff pastry</p><br>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Falafel roll</h3><p> Roll is stuffed with crispy falafel along with lettuce, avocados, red onions topped off with creamy garlic mayonnaise</p><br>
+      </div>
+    </li>
+    <li>
+      <div>
+        
+        <h3>Hotdog</h3><p> Food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun</p><br>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Raj Kachori</h3><p>Rispy deep fried kachori filled with potatoes, moong dal, yogurt, spices and chutneys! Topped with cilantro, sev, pomegranate this is the ultimate indulgence!</p><br>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Paneer Chilly</h3><p> Chilli Paneer is an Indo-Chinese appetizer where crisp batter fried paneer is tossed in slightly sweet, spicy, hot and tangy chilli sauce</p><br>
+      </div>
+    </li>
+    
+  </ol>  
+  </div>
+
+  <script>
+    
+    
+    function add() {
+    var str = $("#title");
+    var str2 = $("#content");
+    var s = "<li><div>" +"<h3>"+ str.val() +"</h3><br>"+"<p>"+str2.val()+"</p>"+ "</div></li>";
+    $("#list").append(s);
+    str.val("");
+    } 
+
+</script>
+
+  
+</body>
+</html>

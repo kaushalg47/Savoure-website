@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="\styles\register.css" rel="stylesheet"/>
+</head>
+<body>
+  <div>
+    <form id="myform" method="post" action="/register" class="register" onsubmit="return validate()">
+    <h1>Register</h1>
+    <input type="text" name="name"  placeholder="Your Name" ></input>
+    <input type="text" name="email"  placeholder="Your Email" ></input>
+    <input type="password" name="password"  placeholder="Your Password" ></input>
+    <input type="password" name="reEnterPassword" placeholder="Re-enter Password" ></input>
+    <input type="submit" class="button" >Register</input>
+    <div>or</div>
+    <div class="button" ><a href="/login">Login</a></div>
+  </form>
+</div>
+
+<script>
+  function validate() {
+      var f=0; 
+      var name=document.forms["myform"]["email"].value;
+      var password=document.forms["myform"]["password"].value; 
+      var passwordchk=document.forms["myform"]["reEnterPassword"].value;
+      pattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+       if(name.match(pattern) && name.length!=0 && password.length!=0 && password==passwordchk)
+      {
+       alert("succesfully logged in!");
+       f++;
+      }
+      else alert("invalid details, please try again!"); 
+      }
+</script>
+  
+</body>
+</html>

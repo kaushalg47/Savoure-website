@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="\styles\login.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  
+    <div class="login">
+      <form name="myform" class="login" action="/" method="post" onsubmit="return validate()">
+        <h1>Log in</h1>
+      <h3>savoure</h3>
+        <input type="text" name="name" placeholder="email id"/>
+        <input type="password" name="password" placeholder="password"/>
+        <button type="submit">Submit</button>
+        <div>or</div>
+        <button><a href="/register/">register</a></button>
+    </form>
+    </div>
+
+    <script>
+      function validate() {
+      var f=0; 
+      var name=document.forms["myform"]["name"].value;
+      var password=document.forms["myform"]["password"].value; 
+      pattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+       if(name.match(pattern) && name.length!=0 && password.length!=0)
+      {
+       alert("succesfully logged in!");
+       f++;
+      }
+      else alert("please enter a valid email id"); 
+      }
+      </script>    
+  
+
+  
+</body>
+</html>
